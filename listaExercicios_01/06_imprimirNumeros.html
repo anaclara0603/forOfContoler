@@ -6,10 +6,24 @@
     */
 
     //ENTRADA
-
+    const inicial = Number(prompt("informe um numero inicial: "))
+    const final = Number(prompt("informe um numero final: "))
+    let pares = [];
+    let impar = [];
 
     //PROCESSAMENTO
-
+    if (inicial < final){
+        for(let a = inicial; a <= final; a++){
+            if(a % 2 !== 0){
+            impar.push(a)
+            } else pares.push(a)
+        }
+    } else if(inicial < final) {
+        alert ('ERRO!! Informe um numero inical menos que o final!')
+    }
+    document.write(`Numeros pares e impares de ${inicial} a ${final}. </br>`)
+        document.write(`Pares: ${pares} </br>`)
+        document.write(`Impares: ${impar}`)
 
     //SAÍDA
 

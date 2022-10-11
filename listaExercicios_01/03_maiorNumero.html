@@ -7,12 +7,16 @@
     */
 
     //ENTRADA
-    const nums = Number(prompt("informe cinco numeros: "))
-    let numeros = []
+    let maiorNum = 0;
+    for (let a = 1; a <= 5; a++){
+        let numAtual = parseInt(prompt('insira um numero:'));
+        if (numAtual > maiorNum){
+            maiorNum = numAtual;
+        }
+    } 
+    document.write(`o maior numero é: ${maiorNum}`)
     //PROCESSAMENTO
-    for(n = 1; n <= nums; n ++ ){
-        if()
-    }
+   
 
     //SAÍDA
 

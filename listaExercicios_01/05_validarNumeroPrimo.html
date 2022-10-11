@@ -6,10 +6,17 @@
     */
 
     //ENTRADA
-
-
+    const num = Number(prompt("informe um numero: "));
+    let validaPrimo = 0;
     //PROCESSAMENTO
-
+    for(let a = 1; a <= num; a++){
+        if(num % a === 0){
+           validaPrimo = validaPrimo + 1
+        }
+    }
+        if(validaPrimo === 2){
+            document.write(`${num} é um numero primo`)
+           } else {document.write(`${num} não é um numero primo`)}
 
     //SAÍDA
 
