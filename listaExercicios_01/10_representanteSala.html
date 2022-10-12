@@ -8,10 +8,46 @@
     */
 
     //ENTRADA
+    let candidatos = [];
+    let votoAl1 = 0;
+    let votoAl2 = 0;
+    let votoAl3 = 0;
+    let vencedor = [];
+    let votoVencedor = [];
 
+    const aluno1 = prompt("informe o nome do primeiro candidato: ");
+    const aluno2 = prompt("informe o nome do segundo cangitdidato: ");
+    const aluno3 = prompt("informe o nome do terceiro candidato: ");
+    const quantAlunos = Number(prompt("Informe quantos alunos irao votar: "));
+    //PROCESSAMENTO{
+        candidatos.push(aluno1, aluno2, aluno3);
 
-    //PROCESSAMENTO
-
+    for(let a = 1; a <= quantAlunos; a++){
+        voto = prompt(`Informe seu voto. Candidatos: ${candidatos}`)
+        
+        if(voto != aluno1 && voto != aluno2 && voto != aluno3){
+            alert('Erro, candidato invalido!!')
+        } else{
+            if(voto === aluno1){
+            votoAl1 = votoAl1 + 1
+        } else if (voto === aluno2){
+            votoAl2 = votoAl2 + 1
+        } else if (voto === aluno3){
+            votoAl3 = votoAl3 + 1
+        }
+        }
+    } if(votoAl1 < votoAl2 && votoAl1 < votoAl3){
+        vencedor.push(aluno1)
+        votoVencedor.push(votoAl1)
+    } else if (votoAl2 < votoAl1 && votoAl2 < votoAl3){
+        vencedor.push(aluno2)
+        votoVencedor.push(votoAl2)
+    } else if (votoAl3 < votoAl1 && votoAl3 < votoAl2){
+        vencedor.push(aluno3)
+        votoVencedor.push(votoAl3)
+    } 
+    document.write(`O representante de sala vencedor é: ${vencedor}.</br> `)
+    document.write(`Com ${votoVencedor} votos.`)
 
     //SAÍDA
 
